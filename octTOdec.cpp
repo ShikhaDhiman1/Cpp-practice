@@ -13,7 +13,7 @@ int octtodec(int n){
     return sum;
 }
 
-void dectooct(int n){
+void decToOct(int n){
     string s="";
     while(n>0){
         int x=n%8;
@@ -37,7 +37,7 @@ int main(){
     cin>>n;
     switch(op){
         case 1: cout<<n<<" in decimal : "<<octtodec(n)<<endl;break;
-        case 2: dectooct(n);break;
+        case 2: decToOct(n);break;
         default : cout<<"Wrong choice!!!\n";
     }
     // cout<<int('A')<<endl;
