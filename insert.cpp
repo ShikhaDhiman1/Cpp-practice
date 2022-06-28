@@ -11,27 +11,24 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }  
+    // Increasing Order ----->
     for(int j=1;j<n;j++){
         int key=arr[j];
-        cout<<" Key : "<<key<<endl;
         int i=j-1;
-        cout<<" i : "<<i<<endl;
-        cout<<"arr[i] > key : "<<arr[i]<<" > "<<key<<" : "<<(arr[i]>key)<<endl;
         while(i>=0 && arr[i]>key){
-            cout<<"arr[i+1](arr["<<i+1<<"]) = "<<arr[i+1]<<endl;
-            cout<<"arr[i](arr["<<i<<"]) = "<<arr[i]<<endl;
             arr[i+1]=arr[i];
-            cout<<"arr[i+1](arr["<<i+1<<"]) = "<<arr[i+1]<<endl;
             i=i-1;
-            cout<<"i = "<<i<<endl;
         }
         arr[i+1]=key;
-        cout<<" Key : "<<key<<endl;
+        //cout<<" Key : "<<key<<endl;
     }
-    cout<<"Sorted array is : \n";
+    cout<<"\nSorted array is : \n";
+    cout<<"\n--> In INCREASING order : \n";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
+    // Decreasing Order ---->
     for(int j=1;j<n;j++){
         int key=arr[j];
         int i=j-1;
@@ -41,6 +38,7 @@ int main(){
         }
         arr[i+1]=key;
     }
+    cout<<"\n--> In DECREASING order : \n";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
