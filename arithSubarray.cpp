@@ -29,5 +29,6 @@ int main(){
             cout<<arr[i-1]<<" "<<arr[i];
         }
     }
+    cout<<endl<<endl;
     return 0;
 }
