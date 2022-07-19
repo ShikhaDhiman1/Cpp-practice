@@ -11,11 +11,14 @@ int hextodec(string n){
     //     sum+=int(last)*x;
     //     x*=16;
     // }
+    
     for(int i=l-1; i >= 0; i--) {
+        if(n[i] != 'x'){
         if (n[i] >= '0' && n[i] <= '9')
            sum += (x*(n[i] - '0')); 
         else sum += x * (int(toupper(n[i])) - 55);
         x *= 16;
+        }
     }
     return sum;
 }
@@ -39,18 +42,18 @@ void decToHex(int n){
     return;
 }
 
-int main(){
-    string n;
-    int op;
-    cout<<"Choose from :\n1. Hexadecimal to Decimal\n2. Decimal to Hexadecimal\n";
-    cout<<"Enter your choice : ";
-    cin>>op;
-    cout<<"Enter the number : ";
-    cin>>n;
-    switch(op){
-        case 1: cout<<n<<" in decimal : "<<hextodec(n)<<endl;break;
-        case 2: decToHex(stoi(n));break;
-        default : cout<<"Wrong choice!!!\n";
-    }
-    return 0;
-}
+// int main(){
+//     string n;
+//     int op;
+//     cout<<"Choose from :\n1. Hexadecimal to Decimal\n2. Decimal to Hexadecimal\n";
+//     cout<<"Enter your choice : ";
+//     cin>>op;
+//     cout<<"Enter the number : ";
+//     cin>>n;
+//     switch(op){
+//         case 1: cout<<n<<" in decimal : "<<hextodec(n)<<endl;break;
+//         case 2: decToHex(stoi(n));break;
+//         default : cout<<"Wrong choice!!!\n";
+//     }
+//     return 0;
+// }
