@@ -11,6 +11,10 @@ int main(){
 
     int i = 1;
     while(str[i] != '\0'){
+        if(str[0] == '0') {
+            flag = false;
+            break;
+        }
         if(str[i] == '0'){
             if(str[i-1] == '0'){
                 flag = false;
